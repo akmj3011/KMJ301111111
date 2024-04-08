@@ -1,9 +1,11 @@
-<!DOCTYPE html>
+
+      
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Slider</title>
+  <title>Animal Image Slider</title>
   <style>
     /* Style for the image slider container */
     .slider-container {
@@ -24,6 +26,20 @@
     .slide img {
       width: 100%;
       height: auto;
+      border-radius: 10px;
+    }
+
+    /* Style for the animal name */
+    .animal-name {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 18px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
     }
 
     /* Style for the navigation arrows */
@@ -58,13 +74,20 @@
 <div class="slider-container">
   <!-- Images -->
   <div class="slide">
-    <img src="https://via.placeholder.com/800x400?text=Slide%201" alt="Slide 1">
+    <img src="https://via.placeholder.com/800x400?text=Rabbit" alt="Rabbit">
+    <div class="animal-name">Rabbit</div>
   </div>
   <div class="slide">
-    <img src="https://via.placeholder.com/800x400?text=Slide%202" alt="Slide 2">
+    <img src="https://via.placeholder.com/800x400?text=Tiger" alt="Tiger">
+    <div class="animal-name">Tiger</div>
   </div>
   <div class="slide">
-    <img src="https://via.placeholder.com/800x400?text=Slide%203" alt="Slide 3">
+    <img src="https://via.placeholder.com/800x400?text=Dog" alt="Dog">
+    <div class="animal-name">Dog</div>
+  </div>
+  <div class="slide">
+    <img src="https://via.placeholder.com/800x400?text=Raccoon" alt="Raccoon">
+    <div class="animal-name">Raccoon</div>
   </div>
 
   <!-- Navigation arrows -->
@@ -87,12 +110,12 @@
   function showSlides(n) {
     let i;
     const slides = document.getElementsByClassName("slide");
-    if (n > slides.length) {slideIndex = 1}    
+    if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+        slides[i].style.display = "none";
     }
-    slides[slideIndex-1].style.display = "block";  
+    slides[slideIndex-1].style.display = "block";
   }
 </script>
 
